@@ -1225,6 +1225,10 @@ body:not(.dark-mode) .grass-image {
         margin-top: -20px;
     }
 
+    .milestone-card h2 {
+        font-size: 44px;
+    }
+
     .milestone-card.highlight h2 {
         font-size: 22px;
     }
