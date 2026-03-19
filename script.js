@@ -739,6 +739,32 @@ function initializeSourcesModal() {
         });
     }
 
+    // Sources footer: Credits button
+    const sourcesCreditsBtn = document.getElementById('sourcesCreditsBtn');
+    if (sourcesCreditsBtn) {
+        sourcesCreditsBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            const attributionModal = document.getElementById('attributionModal');
+            if (attributionModal) {
+                attributionModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    }
+
+    // Sources footer: Report an error — copy email to clipboard
+    const sourcesReportErrorBtn = document.getElementById('sourcesReportErrorBtn');
+    if (sourcesReportErrorBtn) {
+        sourcesReportErrorBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText('azaria.kelman@mail.utoronto.ca').then(() => {
+                const original = sourcesReportErrorBtn.textContent;
+                sourcesReportErrorBtn.textContent = 'Email copied!';
+                setTimeout(() => { sourcesReportErrorBtn.textContent = original; }, 2000);
+            });
+        });
+    }
+
     // Close modal
     closeButton.addEventListener('click', () => {
         modal.classList.remove('active');
