@@ -20,16 +20,15 @@ Scale note: "Everything is to scale"
 | Position | Text |
 |----------|------|
 | 0.2 | That's 38 full days of your year scrolling... |
-| 0.6 | ...spent scrolling |
 
 ---
 
 ## Card: 73,050 Hours — Lifetime social media use per person
 | Position | Type | Content | Notes |
 |----------|------|---------|-------|
-| 0.1 | Text | That's 8.3 years of your life... | double time |
-| 0.4 | Lives mini-card (dynamic) | **[X] years ([X] lives)** lost globally to scrolling since you opened this website | triple duration |
-| 0.86 | Mini-card | **59,750 Hours** — Time it would take to walk to the moon. One foot in front of the other, non-stop, for over 6 years. | triple duration |
+| 0.07 | Text | That's 8.3 years of your life... | |
+| 0.3 | Lives mini-card (dynamic) | **[X] years ([X] lives)** lost globally to scrolling since you opened this website | triple duration (data-sticky-dist=15000) |
+| 0.7 | Mini-card | **59,750 Hours** — Time it would take to walk to the moon. One foot in front of the other, non-stop, for over 6 years. | triple duration (data-sticky-dist=15000) |
 
 ---
 
@@ -38,34 +37,32 @@ Scale note: "Everything is to scale"
 |----------|------|---------|
 | 0.004 | Mini-card | **17,520 Hours** — Michelangelo painting the Sistine Chapel ceiling. Four years, 70 feet in the air, covering 12,000 square feet. |
 | 0.02 | Text | Every 10 seconds, humanity scrolls through 1.74 million hours on social media. That's the same amount of time as 2.5 full lives. |
-| 0.04 | Text | We rarely see time waste represented to scale. Too much dissapears into feeds. |
-| 0.071 | Mini-card | **175,200 Hours** — Building the Great Pyramid of Giza. Twenty years, 20,000 workers, 2.3 million stone blocks. One of the greatest construction feats in human history — and we scroll past it in seconds. |
-| 0.10 | Mini-card | **~340,000 Hours** — Time it would take to read all of Wikipedia. Every word, every article. That's how far you've scrolled — and it's barely a fraction of what we spend in 10 seconds. |
-| 0.172 | Mini-card | **~423,000 Hours** — Voyager 1's flight time since 1977. Still transmitting from over 15 billion miles away, 48 years and counting. The farthest human-made object from Earth — and it wouldn't even fill a quarter of this card. |
+| 0.071 | Mini-card | **175,200 Hours** — Building the Great Pyramid of Giza. Twenty years, 20,000 workers, 2.3 million stone blocks. |
+| 0.10 | Mini-card | **~340,000 Hours** — Time it would take to read all of English Wikipedia. Every word, every article. |
+| 0.172 | Mini-card | **~423,000 Hours** — Voyager 1's flight time since 1977. Still transmitting from over 15 billion miles away, the farthest human-made object from Earth. 48 years and counting. |
 | 0.22 | Text | Keep scrolling. We're not even close. |
-| 0.285 | Mini-card | **700,800 Hours** — One human lifetime — 80 years. Every waking moment, every sleeping one. Birth, life, death. That's how much time you've scrolled past. |
-| 0.37 | Text | And every mini card you just passed — the Pyramids, Wikipedia, a human lifetime, Voyager 1 — together, they fill just a portion of this entire card. |
+| 0.285 | Mini-card | **700,800 Hours** — One human lifetime — 80 years. Birth, life, death. That's how much time you've scrolled past. |
+| 0.37 | Text | By this point, after ~3 seconds of collective scrolling, our fingers have covered enough distance to circumnavigate the globe. |
 | 0.47 | Text | OK, we're coming up on the end now. |
 | 0.52 | Text | Just kidding. We're not even halfway. Keep scrolling. |
-| 0.57 | Text | The time represented by this card is consumed every 10 seconds. By the time you finish scrolling, it will have happened many times over. |
-| 0.65 | Text | 1.74 million hours. That's 2.5 human lifetimes. Consumed. Every. 10. Seconds. |
-| 0.73 | Text | Instead of living, we scroll. |
-| 0.82 | Text | Every scroll teaches the algorithm how to keep you scrolling. The next feed won't be curated — it'll be synthesised to be impossible to stop. |
-| 0.86 | Text | You're almost at the end of this card. Another 10 seconds just passed. Another 1.74 million hours, gone. |
+| 0.57 | Text | Congrats! You've now scrolled past the life of Moses (120 years). |
+| 0.65 | Text | You've now scrolled 140 years. That's the amount of time since the gifting of the Statue of Liberty. Maybe it needs a polish! |
+| 0.73 | Text | Within this time, 150 years, a sesquicentennial human heart beats 5 billion times. |
+| 0.82 | Text | Aza Razkin regrets inventing endless scrolling. He said that "we are losing control of the tools we made." |
+| 0.86 | Text | Regardless: Mark Zuckerberg et al, please hire us 🙏 |
 | 0.88 | Text | We haven't lost you yet, have we? Here's some brainrot for you... |
-| 0.90 | Video | **brainrot3.mp4** — No captions |
-| 0.98 | Text | The scroll is endless — your time isn't. |
-| 0.993 | Lives mini-card (dynamic) | **[X] years ([X] lives)** lost globally to scrolling since you opened this page |
+| 0.89 | Video | **brainrot3.mp4** — No captions |
+| 0.92 | Text | The scroll is endless; your time isn't. |
+| 0.95 | Lives mini-card (dynamic) | **[X] years ([X] lives)** lost globally to scrolling since you opened this page | sticky-to-end |
 
 ---
 
 ## End Screen
 - "You've reached the end."
-- "The scroll is endless—your time isn't."
 - "Every minute you just scrolled through represents real time you'll never get back."
+- "It's a great world out there. Consider checking it out."
 - "What will you do with your next scroll?"
 - [Share button]
-- grass.png image
 
 ---
 
