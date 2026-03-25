@@ -971,7 +971,8 @@ function initializeStickyFloating() {
             // Give the last element extra sticky time so it doesn't disappear too quickly
             const lastBonus = (i === items.length - 1) ? STICKY_DISTANCE : 0;
             const nextTop = (i < items.length - 1) ? items[i + 1].top : item.top + STICKY_DISTANCE + lastBonus;
-            const sectionHeight = Math.max(STICKY_DISTANCE, nextTop - item.top);
+            const minDist = item.el.dataset.stickyDist ? parseInt(item.el.dataset.stickyDist) : STICKY_DISTANCE;
+            const sectionHeight = Math.max(minDist, nextTop - item.top);
             section.style.height = sectionHeight + 'px';
 
             // For videos, wrap with captions in a sticky container
