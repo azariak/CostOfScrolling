@@ -29,7 +29,7 @@ Scale note: "Everything is to scale"
 |----------|------|---------|-------|
 | 0.1 | Text | That's 8.3 years of your life... | double time |
 | 0.4 | Lives mini-card (dynamic) | **[X] years ([X] lives)** lost globally to scrolling since you opened this website | triple duration |
-| 0.55 | Mini-card | **59,750 Hours** — Time it would take to walk to the moon. One foot in front of the other, non-stop, for over 6 years. | triple duration |
+| 0.86 | Mini-card | **59,750 Hours** — Time it would take to walk to the moon. One foot in front of the other, non-stop, for over 6 years. | triple duration |
 
 ---
 
