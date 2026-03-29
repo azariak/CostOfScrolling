@@ -1019,6 +1019,91 @@ function initializeStickyFloating() {
     });
 }
 
+// Counter explosion: animate the massive card's number from 73,050 → 1,736,111
+// with a slot-machine blur effect when it first scrolls into view.
+function runCounterExplosion(numSpan) {
+    const endValue = 1736111;
+    const duration = 2400;
+    const startTime = performance.now();
+    const finalStr = endValue.toLocaleString('en-US'); // "1,736,111"
+
+    // Each digit position gets a settle threshold (0→1 of animation progress).
+    // Digits settle left to right between t=0.35 and t=0.88.
+    let digitCount = 0;
+    for (const ch of finalStr) { if (ch !== ',') digitCount++; }
+    const settleAt = [];
+    let d = 0;
+    for (const ch of finalStr) {
+        if (ch === ',') { settleAt.push(null); continue; }
+        settleAt.push(0.35 + (d / (digitCount - 1)) * 0.53);
+        d++;
+    }
+
+    function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+
+    function frame(now) {
+        const t = Math.min((now - startTime) / duration, 1);
+
+        if (t >= 1) {
+            numSpan.textContent = finalStr;
+            numSpan.style.filter = '';
+            numSpan.style.letterSpacing = '';
+            return;
+        }
+
+        const eased = easeOutQuart(t);
+
+        // Global blur: ramps up fast, then fades as digits settle
+        const blur = t < 0.08
+            ? (t / 0.08) * 7
+            : (1 - eased) * 7;
+
+        // Build slot-machine display
+        let display = '';
+        for (let i = 0; i < finalStr.length; i++) {
+            if (finalStr[i] === ',') { display += ','; continue; }
+            display += t >= settleAt[i]
+                ? finalStr[i]
+                : Math.floor(Math.random() * 10);
+        }
+
+        numSpan.textContent = display;
+        numSpan.style.filter = `blur(${blur.toFixed(1)}px)`;
+        // Slight letter-spacing chaos at start
+        numSpan.style.letterSpacing = t < 0.25 ? `${((1 - t / 0.25) * 4).toFixed(1)}px` : '';
+
+        requestAnimationFrame(frame);
+    }
+
+    requestAnimationFrame(frame);
+}
+
+function initializeCounterExplosion() {
+    const targets = [
+        { hours: '1736111', spanId: 'massiveCounterNum' },
+    ];
+
+    targets.forEach(({ hours, spanId }) => {
+        const card = document.querySelector(`.milestone-card[data-hours="${hours}"]`);
+        const numSpan = document.getElementById(spanId);
+        if (!card || !numSpan) return;
+
+        let triggered = false;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !triggered) {
+                    triggered = true;
+                    observer.disconnect();
+                    runCounterExplosion(numSpan);
+                }
+            });
+        }, { threshold: 0 });
+
+        observer.observe(card);
+    });
+}
+
 // Initialize all components
 function init() {
     initializeCardHeights();
@@ -1036,6 +1121,7 @@ function init() {
     initializeStickyFloating();
     initializeEndBounce();
     initializeThemeToggle();
+    initializeCounterExplosion();
 }
 
 function initializeThemeToggle() {
