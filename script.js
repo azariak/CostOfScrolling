@@ -563,9 +563,21 @@ function initializeSourcesModal() {
             const sourceCodeLink = document.createElement('div');
             sourceCodeLink.className = 'source-code-link';
             sourceCodeLink.style.cssText = 'font-size: 14px; color: #888; margin-top: 8px; grid-column: 1; grid-row: 2;';
-            sourceCodeLink.innerHTML = `View the source code on <a href="https://github.com/azariak/SocialMediaToScale" target="_blank" rel="noopener noreferrer" style="color: #ff4444; text-decoration: none;">GitHub</a>`;
+            sourceCodeLink.innerHTML = `View the source code on <a href="https://github.com/azariak/SocialMediaToScale" target="_blank" rel="noopener noreferrer" style="color: #ff4444; text-decoration: none;">GitHub</a> · Any mistakes are accidental.`;
             modalHeader.appendChild(sourceCodeLink);
         }
+
+        // Note
+        const noteSection = document.createElement('p');
+        noteSection.style.cssText = 'font-size: 14px; color: #888; margin-bottom: 16px;';
+        noteSection.innerHTML = `<strong>Note:</strong> Some of these numbers are estimates. Much of this data is unknown. It is our belief that this information is broadly true. If you spot an error, <button id="sourcesNoteReportBtn" style="background:none;border:none;padding:0;color:#888;cursor:pointer;font-size:14px;">please tell us!</button>`;
+        modalBody.appendChild(noteSection);
+        document.getElementById('sourcesNoteReportBtn')?.addEventListener('click', () => {
+            navigator.clipboard.writeText('azaria.kelman@mail.utoronto.ca').then(() => {
+                const btn = document.getElementById('sourcesNoteReportBtn');
+                if (btn) { btn.textContent = 'Email copied!'; setTimeout(() => { btn.textContent = 'please tell us!'; }, 2000); }
+            });
+        });
 
         // 1. Lives Lost Calculation (stats bar)
         const statsSection = document.createElement('div');

@@ -1184,6 +1184,7 @@ body:not(.dark-mode) .grass-image {
     color: var(--text-muted-2);
 }
 
+
 .modal-footer {
     padding: 14px 40px;
     border-top: 1px solid var(--border-subtle);
