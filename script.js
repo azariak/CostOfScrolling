@@ -659,6 +659,24 @@ function initializeSourcesModal() {
         `;
         modalBody.appendChild(sistineSection);
 
+        // 5b. ~21,410 Lifetimes per Day (floating text at position 0.02 in massive card)
+        const lifetimesPerDaySection = document.createElement('div');
+        lifetimesPerDaySection.className = 'source-item';
+        lifetimesPerDaySection.innerHTML = `
+            <h3>~21,410 Lifetimes Lost Per Day</h3>
+            <p>Every day, the world collectively loses approximately <strong>21,400 lifetimes</strong> to social media scrolling.</p>
+            <p style="font-size: 14px; color: #888; line-height: 1.8;">
+                <strong>Assumptions:</strong><br>
+                • 6 billion social media users<br>
+                • 2.5 hours/day average usage<br>
+                • 1 lifetime = 80 years = 700,800 hours<br><br>
+                <strong>Calculation:</strong><br>
+                • 6,000,000,000 × 2.5 hrs/day = 15,000,000,000 hrs/day<br>
+                • 15,000,000,000 ÷ 700,800 ≈ <strong>21,410 lifetimes/day</strong>
+            </p>
+        `;
+        modalBody.appendChild(lifetimesPerDaySection);
+
         // 6. Great Pyramid of Giza (second mini-card in massive card)
         const pyramidSection = document.createElement('div');
         pyramidSection.className = 'source-item';
@@ -721,6 +739,28 @@ function initializeSourcesModal() {
             </p>
         `;
         modalBody.appendChild(lifetimeSection);
+
+        // 9b. Circumnavigate the Globe in ~3 Seconds (floating text at position 0.37 in massive card)
+        const circumnavigateSection = document.createElement('div');
+        circumnavigateSection.className = 'source-item';
+        circumnavigateSection.innerHTML = `
+            <h3>Circumnavigate the Globe in ~3 Seconds</h3>
+            <p>After roughly <strong>3 seconds</strong> of collective global scrolling, our combined swipe distance equals the circumference of the Earth.</p>
+            <p style="font-size: 14px; color: #888; line-height: 1.8;">
+                <strong>Assumptions:</strong><br>
+                • 6 billion social media users<br>
+                • 2.5 hours of scrolling per person per day<br>
+                • Each scroll gesture: ~2 inches up + 2 inches down = 4 inches<br>
+                • ~2 gestures every 10 seconds = 8 inches per 10 seconds (0.8 in/sec per person)<br>
+                • Earth's circumference: ~24,901 miles = ~1,577,727,360 inches<br><br>
+                <strong>Calculation:</strong><br>
+                • Daily distance per person: 0.8 in/sec × (2.5 × 3,600 sec) = 7,200 in/day<br>
+                • Global daily total: 6,000,000,000 × 7,200 = 43,200,000,000,000 in/day<br>
+                • Rate per second of the day: 43,200,000,000,000 ÷ 86,400 = <strong>500,000,000 in/sec</strong><br>
+                • Time to circumnavigate: 1,577,727,360 ÷ 500,000,000 ≈ <strong>3.16 seconds</strong>
+            </p>
+        `;
+        modalBody.appendChild(circumnavigateSection);
 
         // 10. Life of Moses (sixth mini-card in massive card)
         const mosesSection = document.createElement('div');
