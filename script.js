@@ -667,12 +667,12 @@ function initializeSourcesModal() {
         `;
         modalBody.appendChild(sistineSection);
 
-        // 5b. ~21,410 Lifetimes per Day (floating text at position 0.02 in massive card)
+        // 5b. ~21,404 Lifetimes per Day (floating text at position 0.02 in massive card)
         const lifetimesPerDaySection = document.createElement('div');
         lifetimesPerDaySection.className = 'source-item';
         lifetimesPerDaySection.innerHTML = `
-            <h3>~21,410 Lifetimes Lost Per Day</h3>
-            <p>Every day, the world collectively loses approximately <strong>21,400 lifetimes</strong> to social media scrolling.</p>
+            <h3>~21,404 Lifetimes Lost Per Day</h3>
+            <p>Every day, the world collectively loses approximately <strong>21,404 lifetimes</strong> to social media scrolling.</p>
             <p style="font-size: 14px; color: #888; line-height: 1.8;">
                 <strong>Assumptions:</strong><br>
                 • 6 billion social media users<br>
@@ -680,7 +680,7 @@ function initializeSourcesModal() {
                 • 1 lifetime = 80 years = 700,800 hours<br><br>
                 <strong>Calculation:</strong><br>
                 • 6,000,000,000 × 2.5 hrs/day = 15,000,000,000 hrs/day<br>
-                • 15,000,000,000 ÷ 700,800 ≈ <strong>21,410 lifetimes/day</strong>
+                • 15,000,000,000 ÷ 700,800 = <strong>21,404 lifetimes/day</strong>
             </p>
         `;
         modalBody.appendChild(lifetimesPerDaySection);
