@@ -223,9 +223,13 @@ function updateProgressBar() {
             displayText = `${days} days`;
         } else {
             const years = currentHours / 8760;
-            const seconds = currentHours / 173611.1;
-            const secText = seconds < 10 ? seconds.toFixed(1) : Math.round(seconds);
-            displayText = `${years.toFixed(1)} yrs (~${secText}s)`;
+            if (currentHours >= 74039.5) {
+                const seconds = currentHours / 173611.1;
+                const secText = seconds < 10 ? seconds.toFixed(1) : Math.round(seconds);
+                displayText = `${years.toFixed(1)} yrs (~${secText}s)`;
+            } else {
+                displayText = `${years.toFixed(1)} yrs`;
+            }
         }
 
         elements.scaleLabel.textContent = displayText;
