@@ -1248,7 +1248,7 @@ function updateIphoneFrame() {
     // Frame left edge = just past the progress bar; right edge is mirrored
     const pb = document.querySelector('.progress-bar');
     const pbLeft = pb ? pb.getBoundingClientRect().left : (w / 2 - 350);
-    const frameLeft = Math.max(btnW + 3, pbLeft - 18);
+    const frameLeft = Math.max(btnW + 3, pbLeft - 30);
     const frameRight = w - frameLeft;
     const frameW = frameRight - frameLeft;
 

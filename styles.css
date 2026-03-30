@@ -1271,17 +1271,28 @@ body.dark-mode #iphone-frame-border {
 
 #iphone-notch-pill {
     fill: #111;
-    opacity: 0.5;
+    opacity: 0.75;
     transition: opacity 0.3s ease;
 }
 
 body.dark-mode #iphone-notch-pill {
     fill: #1a1a1a;
-    opacity: 0.5;
+    opacity: 0.75;
 }
 
 body.header-visible #iphone-notch-pill {
     opacity: 0;
+}
+
+@media (max-width: 768px) {
+    #iphone-frame-border,
+    #iphone-corner-fills,
+    #iphone-notch-pill,
+    #iphone-vol-up,
+    #iphone-vol-down,
+    #iphone-power-btn {
+        display: none;
+    }
 }
 
 #iphone-vol-up, #iphone-vol-down, #iphone-power-btn {
