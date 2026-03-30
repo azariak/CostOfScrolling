@@ -647,7 +647,7 @@ function initializeSourcesModal() {
             <p style="font-size: 14px; color: #888; line-height: 1.8;">
                 <strong>Assumptions:</strong><br>
                 • Mean Earth–Moon distance: 238,855 miles<br>
-                • Walking speed: 4 mph (brisk pace; at a standard 3 mph the figure would be ~79,600 hours / ~9 years)<br><br>
+                • Walking speed: 4 mph (suspend the disbelief for a second here)<br><br>
                 <strong>Calculation:</strong> 238,855 ÷ 4 = <strong>59,714 hours</strong> ≈ 59,750
             </p>
             <div class="source-link">Source: <a href="https://www.reddit.com/r/theydidthemath/comments/15pllkp/comment/jvy617w/" target="_blank" rel="noopener noreferrer">r/theydidthemath — Walking to the Moon</a></div>
