@@ -374,12 +374,17 @@ function initializeEndBounce() {
     if (!endScreen) return;
 
     let bounceTimeout = null;
+    let reachedBottomFired = false;
 
     window.addEventListener('scroll', () => {
         const maxScroll = document.body.scrollHeight - window.innerHeight;
 
         // Only trigger when user hits the very bottom
         if (window.scrollY >= maxScroll - 5) {
+            if (!reachedBottomFired) {
+                gtag('event', 'reaching_bottom');
+                reachedBottomFired = true;
+            }
             if (bounceTimeout) clearTimeout(bounceTimeout);
             bounceTimeout = setTimeout(() => {
                 // Bounce above the end-screen
@@ -820,6 +825,7 @@ function initializeSourcesModal() {
 
     // Open modal
     sourcesButton.addEventListener('click', () => {
+        gtag('event', 'open_sources');
         populateModal();
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -899,6 +905,7 @@ function initializeAttributionModal() {
     // Open modal function
     function openModal(e) {
         e.preventDefault();
+        gtag('event', 'open_credits');
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
