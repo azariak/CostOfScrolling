@@ -12,4 +12,5 @@ Built with assistance from agentic programming tools.
 - Add go around earth mini card
 - Send emails
 - Moon walk (59,750 hrs) → 12 university degrees (60,000 hrs)
-- Voyager 1 (~450,000 hrs) → 375 languages (~450,000 hrs)
+- Add 375 languages (~450,000 hrs)
+- Ensure height of inner cards and text is correct
