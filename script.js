@@ -1194,6 +1194,7 @@ function initializeCounterExplosion() {
                 if (entry.isIntersecting && !triggered) {
                     triggered = true;
                     observer.disconnect();
+                    gtag('event', 'reached_1_7m_card');
                     runCounterExplosion(numSpan);
                 }
             });
